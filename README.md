@@ -2,9 +2,7 @@
 
 
 ## Introduction
-<div align="center">
-  <img src="imgs/dataflow.svg" alt="MLKV+ Dataflow" width="600">
-</div>
+![MLKV+ Dataflow](imgs/dataflow.svg)
 
 
 ## How to build MLKV+(PyTorch)
