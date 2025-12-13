@@ -1,7 +1,11 @@
 # MLKV+
+It is a general-purpose, distributed, heterogeneous, and modular key–value data framework for GPU Ap-
+plication(e.g. Embedding Model Training). It integrates two complementary bindings: a GPU-resident
+layer for high-throughput in-memory access and a CPU/disk layer for large-scale persistent storage. Be-
+tween these bindings, MLKV+ employs application-aware data migration and multiple optimized transfer
+paths—including GPU’s High-Bandwidth Memory (HBM) ↔ DRAM ↔ SSD and direct HBM ↔ SSD
+pipelines. 
 
-
-## Introduction
 ![MLKV+ Dataflow](imgs/dataflow.svg)
 
 
