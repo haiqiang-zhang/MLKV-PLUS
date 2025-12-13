@@ -1,0 +1,56 @@
+[
+    {
+        "batch_size": 524288,
+        "binding": "hierarchical_kv",
+        "distribution": "zipf",
+        "field_count": 5,
+        "gbkv_per_sec": 0.271392055416969,
+        "gpu_device": [
+            3
+        ],
+        "hbm_gb": 15,
+        "init_capacity": 104857600,
+        "load_factor": 0.01,
+        "max_field_length": 10,
+        "min_field_length": 10,
+        "multiget_batch_size": 524288,
+        "multiget_prob": 1.0,
+        "multiset_batch_size": 524288,
+        "num_batch_ops": 200,
+        "num_records": 262144,
+        "num_streams": 1,
+        "repetition": 1,
+        "seed": 42,
+        "throughput": 29280849,
+        "total_time": 0.38636945300000003,
+        "workload": "YCSB_Batch",
+        "zipfian_theta": 0.99
+    },
+    {
+        "batch_size": 524288,
+        "binding": "hierarchical_kv",
+        "distribution": "zipf",
+        "field_count": 5,
+        "gbkv_per_sec": 0.271392055416969,
+        "gpu_device": [
+            3
+        ],
+        "hbm_gb": 15,
+        "init_capacity": 104857600,
+        "load_factor": 0.01,
+        "max_field_length": 10,
+        "min_field_length": 10,
+        "multiget_batch_size": 524288,
+        "multiget_prob": 1.0,
+        "multiset_batch_size": 524288,
+        "num_batch_ops": 200,
+        "num_records": 1048576,
+        "num_streams": 1,
+        "repetition": 1,
+        "seed": 42,
+        "throughput": 18756585,
+        "total_time": 0.38636945300000003,
+        "workload": "YCSB_Batch",
+        "zipfian_theta": 0.99
+    }
+]

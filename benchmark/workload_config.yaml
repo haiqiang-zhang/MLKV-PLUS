@@ -1,0 +1,262 @@
+# Workload configurations
+workloads:
+
+  read_only:
+    name: "Read-Heavy with Updates"
+    operations:
+      read: 1
+
+  
+
+  A_65536:
+    name: "Read-Heavy with Updates 65536"
+    operations:
+      multiget: [0.5, 65536]
+      multiset: [0.5, 65536]
+
+
+  Multi_Set_2:
+    name: "Multi-Set-2"
+    operations:
+      multiset: [1, 2]
+
+  
+  Multi_Get_1024:
+    name: "Multi-Get-1024"
+    operations:
+      multiget: [1, 1024]
+
+  Multi_Get_2048:
+    name: "Multi-Get-2048"
+    operations:
+      multiget: [1, 2048]
+  
+  Multi_Get_4096:
+    name: "Multi-Get-4096"
+    operations:
+      multiget: [1, 4096]
+
+  Multi_Set_4096:
+    name: "Multi-Set-4096"
+    operations:
+      multiget: [0, 4096]
+      multiset: [1, 4096]
+
+  Multi_Get_8192:
+    name: "Multi-Get-8192"
+    operations:
+      multiget: [1, 8192]
+
+  Multi_Get_16384:
+    name: "Multi-Get-16384"
+    operations:
+      multiget: [1, 16384]
+
+
+  Multi_Get_32768:
+    name: "Multi-Get-32768"
+    operations:
+      multiget: [1, 32768]
+
+  Multi_Get_65536:
+    name: "Multi-Get-65536"
+    operations:
+      multiget: [1, 65536]
+
+  Multi_Set_65536:
+    name: "Multi-Set-65536"
+    operations:
+      multiset: [1, 65536]
+
+  
+  Multi_Get_131072:
+    name: "Multi-Get-131072"
+    operations:
+      multiget: [1, 131072]
+
+  Multi_Set_131072:
+    name: "Multi-Set-131072"
+    operations:
+      multiset: [1, 131072]
+
+  Multi_Get_262144:
+    name: "Multi-Get-262144"
+    operations:
+      multiget: [1, 262144]
+
+  Multi_Set_262144:
+    name: "Multi-Set-262144"
+    operations:
+      multiset: [1, 262144]
+
+  Multi_Get_524288:
+    name: "Multi-Get-524288"
+    operations:
+      multiget: [1, 524288]
+
+  Multi_Get_1048576:
+    name: "Multi-Get-1048576"
+    operations:
+      multiget: [1, 1048576]
+      
+  Multi_Get_2097152:
+    name: "Multi-Get-2097152"
+    operations:
+      multiget: [1, 2097152]
+      
+  Multi_Set_1024:
+    name: "Multi-Set-1024"
+    operations:
+      multiset: [1, 1024]
+
+  Multi_Set_2048:
+    name: "Multi-Set-2048"
+    operations:
+      multiset: [1, 2048]
+
+  Multi_Set_4096:
+    name: "Multi-Set-4096"
+    operations:
+      multiset: [1, 4096]
+
+  Multi_Set_8192:
+    name: "Multi-Set-8192"
+    operations:
+      multiset: [1, 8192]
+
+  Multi_Set_16384:
+    name: "Multi-Set-16384"
+    operations:
+      multiset: [1, 16384]
+
+  Multi_Set_32768:
+    name: "Multi-Set-32768"
+    operations:
+      multiset: [1, 32768]
+
+  Multi_Set_65536:
+    name: "Multi-Set-65536"
+    operations:
+      multiset: [1, 65536]
+      
+
+  Multi_Set_131072:
+    name: "Multi-Set-131072"
+    operations:
+      multiset: [1, 131072]
+
+  Multi_Set_262144:
+    name: "Multi-Set-262144"
+    operations:
+      multiset: [1, 262144]
+
+  Multi_Set_524288:
+    name: "Multi-Set-524288"
+    operations:
+      multiset: [1, 524288]
+
+  Multi_Set_1048576:
+    name: "Multi-Set-1048576"
+    operations:
+      multiset: [1, 1048576]
+      
+      
+  Multi_Get_Set_65536:
+    name: "Multi-Get-Set-65536"
+    operations:
+      multiget: [0, 65536]
+      multiset: [1, 65536]
+      
+  B:
+    name: "Read-Only with Few Updates"
+    operations:
+      read: 0.95
+      update: 0.05
+    distribution: "zipfian"
+    scan_size: 100
+    orderedinserts: false
+
+  C:
+    name: "Read-Only"
+    operations:
+      read: 1.0
+    distribution: "zipfian"
+    scan_size: 100
+    orderedinserts: false
+
+  D:
+    name: "Read-Heavy with Inserts"
+    operations:
+      read: 0.95
+      insert: 0.05
+    distribution: "zipfian"
+    scan_size: 100
+    orderedinserts: false
+
+  E:
+    name: "Scan-Heavy with Inserts"
+    operations:
+      scan: 0.95
+      insert: 0.05
+    distribution: "zipfian"
+    scan_size: 100
+    orderedinserts: false
+
+
+  0_Write_131072:
+    name: "0-Write-131072"
+    operations:
+      multiget: [1, 131072]
+      multiset: [0, 131072]
+
+  20_Write_131072:
+    name: "20-Write-131072"
+    operations:
+      multiget: [0.8, 131072]
+      multiset: [0.2, 131072]
+
+  40_Write_131072:
+    name: "40-Write-131072"
+    operations:
+      multiget: [0.6, 131072]
+      multiset: [0.4, 131072]
+
+
+  60_Write_131072:
+    name: "60-Write-131072"
+    operations:
+      multiget: [0.4, 131072]
+      multiset: [0.6, 131072]
+
+  80_Write_131072:
+    name: "80-Write-131072"
+    operations:
+      multiget: [0.2, 131072]
+      multiset: [0.8, 131072]
+
+  100_Write_131072:
+    name: "100-Write-131072"
+    operations:
+      multiget: [0, 131072]
+      multiset: [1, 131072]
+
+
+
+# Global configurations
+global:
+  num_records: 3_000_000
+  scan_size: 100
+  distribution: "zipfian"
+  zipfian_theta: 0
+  orderedinserts: true
+  data_integrity: "NOT_CHECK"
+  output_file: "cuDFBenchmarkResult.json"
+  results_folder: "benchmark/results"
+  load_data_output_file: null
+  operations_file: null
+  ops: 10
+  target_qps: 0
+  min_field_length: 10
+  max_field_length: 10
+  field_count: 15
+  # batch_num_records: 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864
