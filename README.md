@@ -1,13 +1,5 @@
 # MLKV+
 
-## Operations workflow
-
-* **Multiset**
-![Multiset Workflow](imgs/multiset_workflow.svg)
-
-* **Multiget**
-![Multiget Workflow](imgs/multiget_workflow.svg)
-
 
 ## How to build MLKV+(PyTorch)
 ```bash
@@ -45,7 +37,6 @@ cmake --install . --component ycsb_binding
 
 ## YCSB benchmark
 
-![YCSB Performance](imgs/ycsb.svg)
 
 * If you already install MLKV+(PyTorch), you can directly use the benchmark toolkit. If you only want to install YCSB benchmark, please install by `MLKV_BENCHMARK_ONLY=true pip install -e ".[benchmark]"`
 * Run Visualizer: `python -m benchmark.visualizer`
