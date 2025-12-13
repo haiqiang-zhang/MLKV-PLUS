@@ -8,3 +8,6 @@
 [submodule "third_party/HierarchicalKV"]
 	path = third_party/HierarchicalKV
 	url = https://github.com/NVIDIA-Merlin/HierarchicalKV.git
+[submodule "gYCSB"]
+	path = gYCSB
+	url = https://github.com/haiqiang-zhang/gYCSB.git
