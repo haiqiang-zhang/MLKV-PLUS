@@ -1,6 +1,12 @@
 # MLKV+
 
 
+## Introduction
+<div align="center">
+  <img src="imgs/dataflow.svg" alt="MLKV+ Dataflow" width="600">
+</div>
+
+
 ## How to build MLKV+(PyTorch)
 ```bash
 # clone submodule
