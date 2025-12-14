@@ -5,12 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mlkv-plus"
 version = "0.1.0"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
     "PyYAML==6.0.2",
-    "dash==3.0.4",
-    "dash-bootstrap-components==2.0.2",
-    "plotly==6.1.0",
     "pandas",
     "matplotlib",
     "psutil==7.0.0",
@@ -18,17 +15,5 @@ dependencies = [
     "torch>=2.8"
 ]
 
-[project.optional-dependencies]
-benchmark = [
-    "PyYAML==6.0.2",
-    "dash==3.0.4",
-    "dash-bootstrap-components==2.0.2",
-    "plotly==6.1.0",
-    "pandas",
-    "matplotlib",
-    "psutil==7.0.0",
-    "pyarrow==20.0.0"
-]
-
-[tool.setuptools.packages.find]
-where = [".", "benchmark"]
+[tool.setuptools]
+packages = ["mlkv_plus"]

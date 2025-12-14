@@ -7,19 +7,6 @@ endfunction()
 # build_sok()
 
 
-
-function(build_json)
-  message("=== Dependency: NLohmann / JSON ===============================================")
-  set(JSON_BuildTests OFF)
-  if(ENABLE_GCS)
-    set(JSON_Install ON)
-  endif()
-  add_subdirectory(json)
-  message("=== End of Dependency: JSON ===============================================")
-endfunction()
-build_json()
-
-
 function(build_rocksdb)
   message("=== Dependency: RocksDB ===============================================")
   set(FAIL_ON_WARNINGS OFF)

@@ -24,7 +24,8 @@ endif()
 
 
 find_package(CUDAToolkit REQUIRED)
-
+find_package(OpenMP REQUIRED)
+find_package(nlohmann_json 3.12.0 REQUIRED)
 
 foreach(cuda_arch ${sm})
   list(APPEND cuda_arch_list ${cuda_arch})
@@ -132,7 +133,7 @@ set_target_properties(mlkv_plus PROPERTIES
                           CUDA_ARCHITECTURES OFF
                           POSITION_INDEPENDENT_CODE ON)
                           # CUDA_SEPARABLE_COMPILATION ON)  # Disabled due to HierarchicalKV conflicts
-target_link_libraries(mlkv_plus PUBLIC rocksdb-shared pthread cufile)
+target_link_libraries(mlkv_plus PUBLIC rocksdb-shared pthread cufile OpenMP::OpenMP_CXX)
 inherit_rocksdb_definitions(mlkv_plus)
 target_compile_definitions(mlkv_plus PRIVATE CUDA_ERROR_CHECK)
 
@@ -141,5 +142,5 @@ target_compile_definitions(mlkv_plus PRIVATE CUDA_ERROR_CHECK)
 # test
 add_subdirectory(test)
 
-# YCSB Benchmark
-add_subdirectory(benchmark/ycsb_cpp)
+# gYCSB Benchmark
+add_subdirectory(gYCSB)

@@ -1,0 +1,13 @@
+CompileFlags:
+  Add:
+    - -I/pub/nfs-data/zhaiqiang/anaconda3/envs/mlkv_plus/targets/x86_64-linux/include
+    - --cuda-gpu-arch=sm_86
+  Remove:
+    - --expt-relaxed-constexpr
+    - --compiler-options
+    - -gencode=arch=*
+    - -ccbin
+    - -gencode
+    - -Xcompiler=*
+    - --options-file
+    - -forward-unknown-to-host-compiler

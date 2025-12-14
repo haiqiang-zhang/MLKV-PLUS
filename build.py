@@ -92,7 +92,7 @@ def run_cmake_build():
     cmake_install_cmd = [
         "cmake",
         "--install", str(BUILD_DIR),
-        "--component", "gycsb_python_binding"
+        "--component", "ycsb_binding"
     ]
     
     print(f"CMake install command: {' '.join(cmake_install_cmd)}")
@@ -224,7 +224,7 @@ def sok():
     
     
 
-def main():
+def build(setup_kwargs):
     import os
     
     # Check if we're installing benchmark-only mode
@@ -256,10 +256,7 @@ def main():
     ext_modules = [sok(), mlkv_plus_torch_binding()]
     
     
-    setup(
-        ext_modules=ext_modules,
-        cmdclass={"build_ext": BuildExtension}
-    )
-
-if __name__ == "__main__":
-    main() 
+    setup_kwargs.update({
+        "ext_modules": ext_modules,
+        "cmdclass": {"build_ext": BuildExtension}
+    })
